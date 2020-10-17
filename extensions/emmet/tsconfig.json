@@ -1,0 +1,14 @@
+{
+	"extends": "../shared.tsconfig.json",
+	"compilerOptions": {
+		"outDir": "./out",
+		"esModuleInterop": true
+	},
+	"exclude": [
+		"node_modules",
+		".vscode-test"
+	],
+	"include": [
+		"src/**/*"
+	]
+}
