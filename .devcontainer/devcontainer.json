@@ -1,0 +1,52 @@
+{
+	"name": "VS Code Development",
+
+	// ** WINDOWS SETUP **
+	//
+	// 1. Install VcXsrv or MobaXterm on your host.
+	// 2. Start VcXsrv / MobaXterm.
+	// 3. Open this repo in a container.
+
+	// ** MACOS SETUP **
+	//
+	// 1. Install XQuartz.
+	// 2. Start XQuartz, go to XQuartz => Preferences => Security tab and
+	//    check "Allow connections from network clients".
+	// 3. Shut down XQuartz.
+	// 4. Whenver you want to use this repo from a container, open a terminal
+	//    and run "xhost +localhost" to give Docker access.
+	// 5. Finally, open this repo in a container.
+
+	// ** LINUX SETUP ***
+	//
+	// Linux has quite a few variations, but this should work for most.
+	//
+	// 1. Open .devcontainer/Dockerfile and be sure USER_UID and USER_GID
+	//    match your local user.(Run "id" from a terminal find these values.)
+	// 2. If you hit a problem with the display not being found, you may have
+	//    to run "xhost +local:root" on your host to give Docker access.
+	// 3. Uncomment "runArgs" below and open this repo in a container (or
+	//    use the Remote-Containers: Rebuild Container command if built).
+	//
+	// "runArgs": [ "-v", "/tmp/.X11-unix:/tmp/.X11-unix", "-v", "/dev/snd:/dev/snd", "-e", "DISPLAY=unix${env:DISPLAY}" ],
+
+	"dockerFile": "Dockerfile",
+
+	"overrideCommand": false,
+
+	"settings": {
+		// zsh is also available
+		"terminal.integrated.shell.linux": "/bin/bash",
+
+		"remote.extensionKind": {
+			"msjsdiag.debugger-for-chrome": "workspace"
+		}
+	},
+
+	"extensions": [
+		"ms-vscode.vscode-typescript-tslint-plugin",
+		"dbaeumer.vscode-eslint",
+		"EditorConfig.EditorConfig",
+		"msjsdiag.debugger-for-chrome"
+	]
+}
