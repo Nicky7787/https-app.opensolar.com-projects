@@ -1,0 +1,113 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-workbench .part.editor > .content .notebook-editor {
+	box-sizing: border-box;
+	padding: 10px 20px;
+	line-height: 22px;
+	user-select: initial;
+	-webkit-user-select: initial;
+	position: relative;
+}
+
+.cell.markdown {
+	user-select: text;
+	-webkit-user-select: text;
+	white-space: initial;
+}
+
+
+.cell.markdown {
+	transform: translate3d(0, 0, 0);
+	padding: 8px 0px 8px 24px;
+	margin-right: 24px;
+}
+
+.cell.code {
+	transform: translate3d(0, 0, 0);
+	padding: 8px 0px 0px 24px;
+	margin-right: 24px;
+}
+
+.monaco-workbench .part.editor > .content .notebook-editor .cell-list-container {
+	position: relative;
+}
+
+.monaco-workbench .part.editor > .content .notebook-editor .notebook-content-widgets {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.monaco-workbench .part.editor > .content .notebook-editor .output {
+	margin-left: 24px;
+	margin-right: 24px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.monaco-workbench .part.editor > .content .notebook-editor .output p {
+	white-space: initial;
+}
+
+.monaco-workbench .part.editor > .content .notebook-editor .output .error_message {
+	color: red;
+}
+
+.monaco-workbench .part.editor > .content .notebook-editor .output pre.traceback {
+	margin: 8px 0;
+}
+
+.monaco-workbench .part.editor > .content .notebook-editor .output .traceback > span {
+	display: block;
+}
+
+.monaco-workbench .part.editor > .content .notebook-editor .output .display img {
+	max-width: 100%;
+}
+
+.monaco-workbench .part.editor > .content .notebook-editor .monaco-list-row {
+	overflow: visible !important;
+}
+
+
+.monaco-workbench .part.editor > .content .notebook-editor .monaco-list-row:focus-within {
+	z-index: 10;
+}
+
+.monaco-workbench .part.editor > .content .notebook-editor .monaco-list-row .menu {
+	position: absolute;
+	left: 0;
+	top: 8px;
+	visibility: hidden;
+	width: 16px;
+	margin: auto;
+	padding-left: 4px;
+}
+
+
+.monaco-workbench .part.editor > .content .notebook-editor .monaco-list-row:hover .menu {
+	visibility: visible;
+}
+
+.monaco-workbench .part.editor > .content .notebook-editor .monaco-list .monaco-list-row:hover {
+	outline: none !important;
+}
+.monaco-workbench .part.editor > .content .notebook-editor .monaco-list-row .menu:hover {
+	cursor: pointer;
+}
+
+.monaco-workbench .part.editor > .content .notebook-editor .monaco-tree.focused.no-focused-item:focus:before,
+.monaco-workbench .part.editor > .content .notebook-editor .monaco-list:not(.element-focused):focus:before {
+	outline: none !important;
+}
+
+.notebook-webview {
+	position: absolute;
+	z-index: 1000000;
+	left: 373px;
+	top: 0px;
+}
